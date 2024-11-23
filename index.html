@@ -107,7 +107,7 @@ print("مرحبًا بك في Python Online!")</textarea>
 
             try {
                 // إرسال الكود إلى الخادم لتشغيله
-                const response = await fetch('http://127.0.0.1:5000/run', {
+                const response = await fetch('http://127.0.0.1:5000/run', {  // التأكد من العنوان هنا
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ code }),
@@ -122,6 +122,7 @@ print("مرحبًا بك في Python Online!")</textarea>
                 }
             } catch (e) {
                 outputElement.textContent = 'فشل الاتصال بالخادم.';
+                outputElement.classList.add('error');
             }
         });
     </script>
