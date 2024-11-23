@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -106,8 +105,8 @@ print("مرحبًا بك في Python Online!")</textarea>
             outputElement.textContent = 'جارٍ تنفيذ الكود...';
 
             try {
-                // إرسال الكود إلى الخادم المدفوع (هنا نستخدم AWS Lambda كمثال)
-                const response = await fetch('https://api.yourserver.com/execute', {  // استخدم عنوان API الخاص بالخادم المدفوع
+                // إرسال الكود إلى الخوادم المدفوعة عبر API
+                const response = await fetch('https://api.yourloadbalancer.com/execute', {  // استخدم عنوان API الخاص بموازن التحميل
                     method: 'POST',
                     headers: { 
                         'Content-Type': 'application/json',
